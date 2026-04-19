@@ -10,9 +10,9 @@ const { createClient } = require('redis')
 
 const publisher = createClient({
     username: 'default',
-    password: 'QjACcYXAcriCTfDkjudBAb2fx2t4BqZd',
+    password: '',
     socket: {
-        host: 'redis-19741.c301.ap-south-1-1.ec2.cloud.redislabs.com',
+        host: '',
         port: 19741
     }
 })
@@ -26,8 +26,8 @@ publisher.on('error', err => {
 const s3Client = new S3Client({
     region: 'ap-south-1',
     credentials: {
-        accessKeyId: 'AKIA3RIUWWBNKUYZOEFN',
-        secretAccessKey: '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'
+        accessKeyId: '',
+        secretAccessKey: ''
     }
 })
 
