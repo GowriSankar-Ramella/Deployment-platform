@@ -19,9 +19,9 @@ const PORT = 9000
 
 const subscriber = createClient({
     username: 'default',
-    password: 'QjACcYXAcriCTfDkjudBAb2fx2t4BqZd',
+    password: '',
     socket: {
-        host: 'redis-19741.c301.ap-south-1-1.ec2.cloud.redislabs.com',
+        host: '',
         port: 19741
     }
 })
@@ -45,14 +45,14 @@ io.listen(9002, () => console.log('Socket Server 9002'))
 const ecsClient = new ECSClient({
     region: 'ap-south-1',
     credentials: {
-        accessKeyId: 'AKIA3RIUWWBNKUYZOEFN',
-        secretAccessKey: '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'
+        accessKeyId: '',
+        secretAccessKey: ''
     }
 })
 
 const config = {
-    CLUSTER: 'arn:aws:ecs:ap-south-1:793001767002:cluster/builder-cluster-newone',
-    TASK: 'arn:aws:ecs:ap-south-1:793001767002:task-definition/builder-task-newone'
+    CLUSTER: '',
+    TASK: ''
 }
 
 app.use(express.json())
@@ -70,8 +70,8 @@ app.post('/project', async (req, res) => {
         networkConfiguration: {
             awsvpcConfiguration: {
                 assignPublicIp: 'ENABLED',
-                subnets: ['subnet-012a442ac8d487095', 'subnet-0f41c7bda9dea246f', 'subnet-004b186e150627af2'],
-                securityGroups: ['sg-0cf9f2fc334978d5c']
+                subnets: [],
+                securityGroups: []
             }
         },
         overrides: {
